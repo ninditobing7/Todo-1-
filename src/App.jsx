@@ -22,8 +22,8 @@ function App() {
   console.log(todos)
 
   return (
-    <div>
-      <h1>My Todo List</h1>
+    <div  style={{ textAlign: 'center', padding: '12px' }} >
+      <h1 style={{fontSize: '36px'}} >My Todo List</h1>
       {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>
       })}
