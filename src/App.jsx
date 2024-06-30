@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todos from './components/Todos'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -22,11 +23,11 @@ function App() {
   console.log(todos)
 
   return (
-    <div  style={{ textAlign: 'center', padding: '12px' }} >
-      <h1 style={{fontSize: '36px'}} >My Todo List</h1>
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+
+    <div style={{ textAlign: 'center', padding: '12px' }}>
+      <h1 style={{fontSize: '36px'}}>My Todo List</h1>
+      {/* Berikan data-nya ke component Todos */}
+      <Todos todos={todos} />
     </div>
   )
 }
